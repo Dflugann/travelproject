@@ -18,4 +18,12 @@ Route::get('/tours', ['as' => 'site.tours', 'uses' => 'Site\ToursController@inde
 Route::resource('services', 'Site\ServicesController');
 Route::resource('about', 'Site\AboutController');
 Route::resource('blog', 'Site\BlogController');
-Route::resource('menus', 'MenuController');
+Route::resource('menus', 'Admin\MenuController');
+Route::get('/admin', function () {
+    return view('admin/dashboard');
+});
+
+Auth::routes();
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('admin', 'Admin\AdminController');
+});

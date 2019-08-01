@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\menu;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class MenuController extends Controller
 {
@@ -14,8 +15,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menu = Menu::all();
-        return $menu;
+        $menus = Menu::all();
+        return view('admin.menu.index', compact('menus'));
     }
 
     /**

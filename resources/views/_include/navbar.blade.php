@@ -17,7 +17,7 @@
                             <ul class="dropdown">
                                 <li><a href="#">Destination</a></li>
                                 <li><a href="#">Cruises</a></li>
-                                <li><a href="#">Hotels</a></li>
+                                <li><a href="#">Ho  tels</a></li>
                                 <li><a href="#">Booking</a></li>
                             </ul>
                         </li>
